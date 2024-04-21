@@ -6,7 +6,7 @@ const Form = () => {
     // localStorage.setItem('inputs', JSON.stringify([]))
     const [fetchedInputs, setFetchedInputs] = useState([])
     useEffect(() => {
-        const inputs = JSON.parse(localStorage.getItem('inputs'));
+        const inputs = JSON.parse(localStorage.getItem('inputs')) || [];
         setFetchedInputs([...inputs]);
     }, []);
     const [formData, setFormData] = useState({
